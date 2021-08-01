@@ -1,0 +1,29 @@
+{
+  "name": "nest-grpc-microservice",
+  "version": "1.0.0",
+  "description": "이 프로젝트는 [monorepo](https://gomonorepo.org/) API 게이트웨이를 포함하며 [gRPC](https://grpc.io/) b백엔드 마이크로서비스는 모두 NestJS 프레임워크와 TypeScript를 사용하여 작성된다. 이 프로젝트는 주로 학습/실험 목적으로만 사용된다.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "docs:proto-gen": "./scripts/generate-proto-docs.sh",
+    "install": "./scripts/install.sh",
+    "lint": "./scripts/lint.sh",
+    "build": "./scripts/build.sh",
+    "docker:build": "docker-compose build",
+    "docker:start": "docker-compose up",
+    "docker:teardown": "docker-compose down -v",
+    "start": "npm run install && npm run lint && npm run build && npm run docker:build && npm run docker:start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/duarbdhks/nestjs-grpc-microservice.git"
+  },
+  "author": "duarbdhks",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/duarbdhks/nestjs-grpc-microservice/issues"
+  },
+  "homepage": "https://github.com/duarbdhks/nestjs-grpc-microservice#readme"
+}
